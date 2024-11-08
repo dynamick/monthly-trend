@@ -4,6 +4,11 @@
 
 Semplice componente React per visualizzare un grafico a barre mensili.
 
+## Demo
+
+Si può provare il componente funzionante all’indirizzo:
+
+[https://monthly-trend.vercel.app/](https://monthly-trend.vercel.app/)
 
 ## Struttura del progetto
 
@@ -23,12 +28,6 @@ Semplice componente React per visualizzare un grafico a barre mensili.
     │   └── vite-env.d.ts            # Definizioni TypeScript specifiche per Vite
     ├── package.json
     └── tsconfig.json                # Configurazione TypeScript
-
-## Demo
-
-Si può provare il componente funzionante all’indirizzo:
-
-[https://monthly-trend.vercel.app/](https://monthly-trend.vercel.app/)
 
 ## Installazione
 
@@ -63,6 +62,14 @@ Si può provare il componente funzionante all’indirizzo:
     ```
 
   Vite farà partire un server locale, di solito accessibile su `http://localhost:5173`, e visualizzerà l'URL nel terminale.
+
+## Librerie utilizzate
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Date-fns](https://date-fns.org/)
 
 
 Happy reviewing 🚀
