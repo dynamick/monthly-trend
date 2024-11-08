@@ -28,7 +28,7 @@ Semplice componente React per visualizzare un grafico a barre mensili.
 
 Si può provare il componente funzionante all’indirizzo:
 
-[https://monthly-trend-git-main-dynamicks-projects.vercel.app/](https://monthly-trend-git-main-dynamicks-projects.vercel.app/)
+[https://monthly-trend.vercel.app/](https://monthly-trend.vercel.app/)
 
 ## Installazione
 
