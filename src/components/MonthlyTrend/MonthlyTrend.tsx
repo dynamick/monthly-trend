@@ -11,6 +11,7 @@ interface MonthlyTrendProps {
 const Container = styled.div`
   display: flex;
   user-select: none;
+  -webkit-user-select: none;
   cursor: pointer;
 `;
 
