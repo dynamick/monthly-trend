@@ -26,6 +26,7 @@ const Loading = styled.p`
 
 const MonthlyTrend: React.FC<MonthlyTrendProps> = ({ onSelectionChange }) => {
   const [data, setData] = useState<TrendData>();
+  const [error, setError] = useState<string>();
   const [selectedMonths, setSelectedMonths] = useState<number[]>([]);
   const [previousSelectedMonths, setPreviousSelectedMonths] = useState<
     number[]
@@ -35,14 +36,15 @@ const MonthlyTrend: React.FC<MonthlyTrendProps> = ({ onSelectionChange }) => {
 
   useEffect(() => {
     // Fetch the data from the API
-    try {
-      fetchData().then((data) => setData(data));
-    } catch (error) {
-      console.error(error);
-    }
+    fetchData()
+      .then((data) => setData(data))
+      .catch((error) => setError(error));
   }, []);
 
-  // If the data is not loaded yet, display a loading message
+  // display a loading message or an error message
+  if (error) {
+    return <Loading>{error}</Loading>;
+  }
   if (!data) {
     return <Loading>Loading...</Loading>;
   }

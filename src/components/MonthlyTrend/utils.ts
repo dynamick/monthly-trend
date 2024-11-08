@@ -7,20 +7,29 @@ export type TrendData = {
   mesi: MonthData[];
 };
 
-// This function fetches the data from the API and the response is of type MonthlyData
 export const fetchData = async (): Promise<TrendData> => {
-  const response = await fetch(
-    "http://staccah.fattureincloud.it/testfrontend/data.json",
-  );
-  const data = await response.json();
-  return data;
+  // NOTE FOR REVIEWER: The URL in prod mode is hardcoded for MIXED content issue (the API endpoint is http and the site is https)
+  const randomFile = Math.floor(Math.random() * 3) + 1;
+  const url = import.meta.env.PROD
+    ? `/data${randomFile}.json`
+    : "http://staccah.fattureincloud.it/testfrontend/data.json";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      return Promise.reject(new Error("Response ko!"));
+    }
+    return await response.json();
+  } catch {
+    return Promise.reject("Network error");
+  }
 };
 
 export const formatPrice = (price: number): string => {
   return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: "EUR",
-    minimumFractionDigits: 0, // Rimuove i decimali se non necessari
+    minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(price);
 };

@@ -50,7 +50,7 @@ const Title = styled.div`
   text-transform: capitalize;
 `;
 
-const Content = styled.div<{ $percentile?: number }>`
+const Content = styled.div`
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -59,11 +59,11 @@ const Content = styled.div<{ $percentile?: number }>`
   overflow: hidden;
 `;
 
-const Bar = styled.div<{ $percentile?: number }>`
+const Bar = styled.div<{ $percentile: number }>`
   position: absolute;
   width: 100%;
   bottom: 0;
-  top: ${(p) => p.$percentile}%;
+  top: ${(p) => 100 - p.$percentile}%;
   background-color: ${BAR_COLOR};
   z-index: 1;
   transition: top 0.3s ease;
@@ -115,7 +115,7 @@ const MonthlyBar: React.FC<MonhtlyBarProps> = ({
   return (
     <Container onMouseDown={onMouseDown} onMouseEnter={onMouseEnter}>
       <Title>{monthName}</Title>
-      <Content $percentile={percentile}>
+      <Content>
         <Bar $percentile={percentile} />
         <Documents title={`${documents} doc.`}>{documents} doc.</Documents>
         <Price title={price}>{price}</Price>
