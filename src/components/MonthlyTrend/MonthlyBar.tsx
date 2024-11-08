@@ -66,7 +66,6 @@ const Bar = styled.div<{ $percentile: number }>`
   top: ${(p) => 100 - p.$percentile}%;
   background-color: ${BAR_COLOR};
   z-index: 1;
-  transition: top 0.3s ease;
 `;
 
 const Price = styled.div`
@@ -116,7 +115,7 @@ const MonthlyBar: React.FC<MonhtlyBarProps> = ({
     <Container onMouseDown={onMouseDown} onMouseEnter={onMouseEnter}>
       <Title>{monthName}</Title>
       <Content>
-        <Bar $percentile={percentile} />
+        <Bar $percentile={percentile} className="animatedBar" />
         <Documents title={`${documents} doc.`}>{documents} doc.</Documents>
         <Price title={price}>{price}</Price>
       </Content>

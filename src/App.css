@@ -19,20 +19,19 @@ body {
 }
 
 
-/*.timelapse {*/
-/*  transition: top 0.3s ease;*/
-/*  !*animation-name: timelapse;*!*/
-/*  !*animation-fill-mode: forwards;*!*/
-/*  !*animation-duration: 0.3s;*!*/
-/*  !*animation-timing-function: cubic-bezier(.86, .05, .4, .96);*!*/
-/*}*/
+.animatedBar {
+  animation-name: animatedBar;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+}
 
-/*@keyframes timelapse {*/
-/*  0% {*/
-/*    transform: translateY(100%);*/
-/*  }*/
+@keyframes animatedBar {
+  0% {
+    transform: translateY(100%);
+  }
 
-/*  100% {*/
-/*    transform: translateY(0);*/
-/*  }*/
-/*}*/
+  100% {
+    transform: translateY(0);
+  }
+}
