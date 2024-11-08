@@ -58,6 +58,6 @@
 
 Si può provare il componente funzionante all’indirizzo:
 
-[https://monthly-trend-ok90ll9ab-dynamicks-projects.vercel.app/](https://monthly-trend-ok90ll9ab-dynamicks-projects.vercel.app/)
+[https://monthly-trend-git-main-dynamicks-projects.vercel.app/](https://monthly-trend-git-main-dynamicks-projects.vercel.app/)
 
 Happy reviewing 🚀
