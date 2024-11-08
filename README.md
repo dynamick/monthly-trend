@@ -32,7 +32,7 @@
 
   Vite farà partire un server locale, di solito accessibile su `http://localhost:5173`, e visualizzerà l'URL nel terminale.
 
-- **Struttura del progetto**
+## Struttura del progetto
 
   Dopo l’installazione, troverai la struttura del progetto organizzata come segue:
 
