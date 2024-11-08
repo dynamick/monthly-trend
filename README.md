@@ -1,6 +1,6 @@
 # Monthly Trend
 
-![https://raw.githubusercontent.com/dynamick/monthly-trend/refs/heads/main/public/screenshot.png](https://raw.githubusercontent.com/dynamick/monthly-trend/refs/heads/main/public/screenshot.png)
+![https://github.com/dynamick/monthly-trend/blob/main/public/screenshot.png](public/screenshot.png)
 
 Semplice componente React per visualizzare un grafico a barre mensili.
 
